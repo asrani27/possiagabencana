@@ -18,7 +18,7 @@ class BerandaController extends Controller
     }
     public function berita()
     {
-        $data = Pberita::get();
+        $data = Pberita::orderBy('id', 'DESC')->get();
         return view('new.berita', compact('data'));
     }
     public function edukasi()

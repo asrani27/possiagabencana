@@ -42,6 +42,13 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin/profil', 'AdminController@profil');
     Route::post('/admin/profil/update', 'AdminController@profilUpdate');
     Route::get('/admin/berita', 'AdminController@berita');
+
+    Route::get('/admin/berita/add', 'AdminController@addBerita');
+    Route::post('/admin/berita/add', 'AdminController@storeBerita');
+    Route::get('/admin/berita/edit/{id}', 'AdminController@editBerita');
+    Route::post('/admin/berita/edit/{id}', 'AdminController@updateBerita');
+    Route::get('/admin/berita/delete/{id}', 'AdminController@deleteBerita');
+
     Route::get('/admin/edukasi', 'AdminController@edukasi');
     Route::post('/admin/edukasi/update', 'AdminController@edukasiUpdate');
     Route::get('/admin/peringatandini', 'AdminController@peringatandini');

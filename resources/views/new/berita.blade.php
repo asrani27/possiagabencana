@@ -12,51 +12,24 @@
                     </div>
                 </div> <!-- row -->
                 <div class="row justify-content-center">
+                    @foreach ($data as $item)
+                        
                     <div class="col-lg-4 col-md-7">
                         <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
                             <div class="blog-image">
-                                <img src="/basic/images/blog-1.jpg" alt="blog">
+                                <img src="/storage/foto/compress/{{$item->foto}}" alt="blog">
                             </div>
                             <div class="blog-content">
                                 <ul class="meta">
                                     <li>Posted By: <a href="#">Admin</a></li>
-                                    <li>03 June, 2023</li>
+                                    <li>{{\Carbon\Carbon::parse($item->created_at)->format('d M Y')}}</li>
                                 </ul>
-                                <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-                                <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
+                                <p class="text">{{$item->judul}}</p>
+                                {{-- <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a> --}}
                             </div>
                         </div> <!-- single blog -->
                     </div> 
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                            <div class="blog-image">
-                                <img src="/basic/images/blog-2.jpg" alt="blog">
-                            </div>
-                            <div class="blog-content">
-                                <ul class="meta">
-                                    <li>Posted By: <a href="#">Admin</a></li>
-                                    <li>03 June, 2023</li>
-                                </ul>
-                                <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-                                <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
-                            </div>
-                        </div> <!-- single blog -->
-                    </div> 
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-blog mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
-                            <div class="blog-image">
-                                <img src="/basic/images/blog-3.jpg" alt="blog">
-                            </div>
-                            <div class="blog-content">
-                                <ul class="meta">
-                                    <li>Posted By: <a href="#">Admin</a></li>
-                                    <li>03 June, 2023</li>
-                                </ul>
-                                <p class="text">Lorem ipsuamet conset sadips cing elitr seddiam nonu eirmod tempor invidunt labore.</p>
-                                <a class="more" href="#">Learn More <i class="lni-chevron-right"></i></a>
-                            </div>
-                        </div> <!-- single blog -->
-                    </div> 
+                    @endforeach
                 </div> <!-- row -->
             </div> <!-- container -->
         </section>
