@@ -39,9 +39,9 @@ crossorigin=""/>
               <a href="/admin/peringatandini" class="btn btn-app" style="color: #2e3134">
                 <i class="fas fa-exclamation-triangle"></i> Peringatan Dini
               </a>
-              <a href="/admin/petabencana" class="btn btn-app" style="color: #2e3134">
+              {{-- <a href="/admin/petabencana" class="btn btn-app" style="color: #2e3134">
                 <i class="fas fa-map"></i> Peta Bencana
-              </a>
+              </a> --}}
               <a href="/admin/kontak" class="btn btn-app" style="color: #2e3134">
                 <i class="fas fa-phone"></i> Kontak
               </a>

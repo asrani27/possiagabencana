@@ -29,9 +29,9 @@
                             <li class="nav-item">
                                 <a class="page-scroll" href="/peringatan-dini">Peringatan Dini</a>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="page-scroll" href="/peta-bencana">Peta Bencana</a>
-                            </li>
+                            </li> --}}
                             <li class="nav-item">
                                 <a class="page-scroll" href="/kontak">Kontak</a>
                             </li>
